@@ -14,7 +14,7 @@ const MenuIcon = styled.button`
   width: 1.5rem;
   height: 1.5rem;
   background: transparent;
-  border: button;
+  /* border: button; */
   cursor: pointer;
   z-index: 5;
   margin: 0;
