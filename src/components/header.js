@@ -25,6 +25,7 @@ const MenuIcon = styled.button`
     width: 1.157rem;
     height: 0.2rem;
     background: white;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
     transform-origin: 1px;
     position: relative;
@@ -66,7 +67,7 @@ const MenuLinks = styled.nav`
 
   li {
     margin-top: 1rem;
-    margin-right: 1rem;
+    margin-right: 2.5rem;
   }
 
   a {
