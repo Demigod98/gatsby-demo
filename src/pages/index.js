@@ -15,7 +15,7 @@ const MenuIcon = styled.button`
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
-  height: 1.5rem;
+  height: ${({ nav }) => (nav ? "2rem" : "2.2rem")};
   background: transparent;
   border: button;
   cursor: pointer;
@@ -55,7 +55,7 @@ const MenuLinks = styled.nav`
   text-align: center;
   height: 100vh;
   width: 30%;
-  background: #d7d7d7;
+  background: rebeccapurple;
   position: fixed;
   top: 0;
   right: 0;
