@@ -11,10 +11,10 @@ const MenuIcon = styled.button`
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
-  -webkit-flex-direction: row;
   flex-direction: column;
-  -webkit-justify-content: space-around;
+  -webkit-flex-direction: column;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   width: 1.5rem;
   height: 1.5rem;
   background: transparent;
@@ -51,10 +51,13 @@ const MenuIcon = styled.button`
 `
 
 const MenuLinks = styled.nav`
-  display: fixed;
+  display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: center;
+  -webkit-align-items: center;
   text-align: center;
   height: 100vh;
   width: 30%;
