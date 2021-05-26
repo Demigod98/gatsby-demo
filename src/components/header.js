@@ -45,14 +45,14 @@ const MenuIcon = styled.button`
 `
 
 const MenuLinks = styled.nav`
-  display: flex;
+  display: fixed;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
-  width: 25%;
-  background: #d7d7d7;
+  width: 30%;
+  background: #663399a0;
   position: fixed;
   top: 0;
   right: 0;
@@ -66,6 +66,7 @@ const MenuLinks = styled.nav`
 
   li {
     margin-top: 1rem;
+    margin-right: 1rem;
   }
 
   a {
@@ -107,6 +108,7 @@ const Header = ({ siteTitle }) => {
             style={{
               color: `white`,
               textDecoration: `none`,
+              marginRight: `5rem`,
             }}
           >
             {siteTitle}
