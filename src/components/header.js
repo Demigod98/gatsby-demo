@@ -27,11 +27,11 @@ const MenuIcon = styled.button`
   -webkit-align-items: center;
 
   div {
-    width: 1.157rem;
+    width: 1.2rem;
     height: 0.2rem;
-    background: white;
+    background: red;
     border-radius: 5px;
-    -webkit-transform-origin: 1px;
+    -webkit-transform-origin: -2px;
     transform-origin: 1px;
     position: relative;
     transition: opacity 300ms, transform 300ms;
