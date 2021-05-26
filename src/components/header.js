@@ -11,6 +11,7 @@ const MenuIcon = styled.button`
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: column;
   -webkit-justify-content: space-around;
   justify-content: space-around;
