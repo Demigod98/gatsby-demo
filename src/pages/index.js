@@ -1,115 +1,15 @@
 import * as React from "react"
-import { useState } from "react"
-import styled from "styled-components"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const MenuIcon = styled.button`
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: transparent;
-  border: button;
-  cursor: pointer;
-  z-index: 5;
-  margin: 0;
-  outline: 0;
-  align-items: center;
-
-  div {
-    width: 1.157rem;
-    height: 0.2rem;
-    background: white;
-    border-radius: 5px;
-    transform-origin: 1px;
-    position: relative;
-    transition: opacity 300ms, transform 300ms;
-    margin-left: ${({ nav }) => (nav ? "0.3rem" : "0rem")};
-
-    :first-child {
-      transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
-    }
-    :nth-child(2) {
-      opacity: ${({ nav }) => (nav ? "0" : "1")};
-    }
-
-    :nth-child(3) {
-      transform: ${({ nav }) => (nav ? "rotate(-45deg)" : "rotate(0)")};
-    }
-  }
-`
-
-const MenuLinks = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  width: 30%;
-  background: #d7d7d7;
-  position: fixed;
-  top: 0;
-  right: 0;
-  transition: transform 300ms;
-  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
-  z-index: 4;
-
-  ul {
-    list-style-type: none;
-  }
-
-  li {
-    margin-top: 1rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    transition: color 300ms;
-
-    &:hover {
-      color: #6ab4ff;
-    }
-  }
-`
-
 const IndexPage = () => {
-  const [nav, showNav] = useState(false)
-
   return (
     <Layout>
       <Seo title="Home" />
-      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
-        <div />
-        <div />
-        <div />
-      </MenuIcon>
-      <MenuLinks nav={nav}>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Bio</a>
-          </li>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </MenuLinks>
+
       <h1>Hello Gatsby</h1>
       <p>This is my first Gatsby site.</p>
       <div
@@ -130,11 +30,43 @@ const IndexPage = () => {
         />
       </div>
       <h2>Link To About Page</h2>
-      <div style={{ display: `flex`, justifyContent: `center` }}>
+      <div
+        style={{
+          display: `flex`,
+          justifyContent: `center`,
+          marginBottom: `2rem`,
+        }}
+      >
         <Link to="/page-2/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </div>
-      <button>Click This Button</button>
+      <form action="https://www.youtube.com/results">
+        <label htmlFor="search">
+          <h3 style={{ display: `inline`, color: `rebeccapurple` }}>
+            Enter The Song You Want To Listen
+          </h3>{" "}
+        </label>
+        <input
+          type="text"
+          id="search"
+          placeholder="Elitni odredi ne koci"
+          name="search_query"
+          style={{ marginLeft: `1rem` }}
+        />
+        <button
+          type="submit"
+          style={{
+            display: `block`,
+            margin: `1rem auto`,
+            borderRadius: `20px`,
+            background: `rebeccapurple`,
+            color: `white`,
+          }}
+        >
+          Submit Song!
+        </button>
+      </form>
+
       <p>This is Gatsby Astronaut Picture!</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero

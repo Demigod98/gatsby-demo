@@ -37,11 +37,15 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            display: `flex`,
+            justifyContent: `center`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <div>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a> {"by Pero"}
+          </div>
         </footer>
       </div>
     </>
