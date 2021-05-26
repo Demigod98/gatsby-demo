@@ -111,18 +111,7 @@ const Header = ({ siteTitle }) => {
           padding: `1.45rem 1.0875rem`,
         }}
       >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-              marginRight: `5rem`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+        <h1 style={{ margin: 0, marginRight: `5rem` }}>Gatsby Page</h1>
       </div>
       <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div />
