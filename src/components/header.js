@@ -40,6 +40,8 @@ const MenuIcon = styled.button`
     margin-left: ${({ nav }) => (nav ? "0.3rem" : "0rem")};
 
     :first-child {
+      -webkit-transform: ${({ nav }) =>
+        nav ? "rotate(-48grad)" : "rotate(0)"};
       transform: ${({ nav }) => (nav ? "rotate(48grad)" : "rotate(0)")};
     }
     :nth-child(2) {
@@ -47,6 +49,8 @@ const MenuIcon = styled.button`
     }
 
     :nth-child(3) {
+      -webkit-transform: ${({ nav }) =>
+        nav ? "rotate(-48grad)" : "rotate(0)"};
       transform: ${({ nav }) => (nav ? "rotate(-48grad)" : "rotate(0)")};
     }
   }
