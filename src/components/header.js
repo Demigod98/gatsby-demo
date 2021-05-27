@@ -31,7 +31,7 @@ const MenuIcon = styled.button`
   div {
     width: 1.2rem;
     height: 0.2rem;
-    background: red;
+    background: white;
     border-radius: 5px;
     -webkit-transform-origin: -5px;
     transform-origin: 1px;
