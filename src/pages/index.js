@@ -1,9 +1,37 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+const Button = styled.button`
+  border: none;
+  border-radius: 20px;
+  display: block;
+  margin: 3rem auto;
+  background-color: rebeccapurple;
+  color: white;
+  transition: transform 300ms, color 300ms;
+  animation: rotation 5s infinite;
+
+  :hover {
+    background-color: #663399fa;
+    color: gainsboro;
+    transform: scale(1.1);
+    animation-play-state: paused;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`
 
 const IndexPage = () => {
   return (
@@ -66,6 +94,7 @@ const IndexPage = () => {
           Submit Song!
         </button>
       </form>
+      <Button>Imitation Button!</Button>
 
       <p>This is Gatsby Astronaut Picture!</p>
       <p>

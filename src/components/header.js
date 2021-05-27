@@ -24,6 +24,9 @@ const MenuIcon = styled.button`
   outline: 0;
   align-items: center;
   -webkit-align-items: center;
+  @media (min-width: 960px) {
+    display: none;
+  }
 
   div {
     width: 1.2rem;
@@ -37,7 +40,7 @@ const MenuIcon = styled.button`
     margin-left: ${({ nav }) => (nav ? "0.3rem" : "0rem")};
 
     :first-child {
-      transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ nav }) => (nav ? "rotate(44deg)" : "rotate(0)")};
     }
     :nth-child(2) {
       opacity: ${({ nav }) => (nav ? "0" : "1")};
@@ -67,9 +70,23 @@ const MenuLinks = styled.nav`
   transition: transform 300ms;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
   z-index: 4;
+  @media (min-width: 960px) {
+    width: 100%;
+    background-color: transparent;
+    transform: translateX(0);
+  }
 
   ul {
     list-style-type: none;
+
+    @media (min-width: 960px) {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: -43.5%;
+      left: 30%;
+      margin-right: 5rem;
+    }
   }
 
   li {
@@ -79,7 +96,7 @@ const MenuLinks = styled.nav`
 
   a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     transition: color 300ms;
 
@@ -110,7 +127,15 @@ const Header = ({ siteTitle }) => {
           padding: `1.45rem 1.0875rem`,
         }}
       >
-        <h1 style={{ margin: 0, marginRight: `5rem` }}>Gatsby Page</h1>
+        <h1
+          style={{
+            color: `white`,
+            margin: 0,
+            marginRight: `5rem`,
+          }}
+        >
+          Gatsby Page
+        </h1>
       </div>
       <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
         <div />
