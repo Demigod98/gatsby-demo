@@ -35,6 +35,7 @@ const MenuIcon = styled.button`
     border-radius: 5px;
     -webkit-transform-origin: -5px;
     transform-origin: 1px;
+
     position: relative;
     transition: opacity 200ms, transform 300ms;
     margin-left: ${({ nav }) => (nav ? "0.3rem" : "0rem")};
@@ -43,6 +44,11 @@ const MenuIcon = styled.button`
       -webkit-transform: ${({ nav }) =>
         nav ? "rotate(-48grad)" : "rotate(0)"};
       transform: ${({ nav }) => (nav ? "rotate(48grad)" : "rotate(0)")};
+      _::-webkit-full-page-media,
+      _:future,
+      :root .safari_only {
+        transform: ${({ nav }) => (nav ? "rotate(48grad)" : "rotate(0)")};
+      }
     }
     :nth-child(2) {
       transform: ${({ nav }) => (nav ? "translateX(100%)" : "translateX(0)")};
@@ -53,6 +59,11 @@ const MenuIcon = styled.button`
       -webkit-transform: ${({ nav }) =>
         nav ? "rotate(-48grad)" : "rotate(0)"};
       transform: ${({ nav }) => (nav ? "rotate(-48grad)" : "rotate(0)")};
+      _::-webkit-full-page-media,
+      _:future,
+      :root .safari_only {
+        transform: ${({ nav }) => (nav ? "rotate(-48grad)" : "rotate(0)")};
+      }
     }
   }
 `
