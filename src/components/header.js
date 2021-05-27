@@ -65,6 +65,9 @@ const MenuIcon = styled.button`
         transform: ${({ nav }) => (nav ? "rotate(-48grad)" : "rotate(0)")};
       }
     }
+    @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+      transform-origin: 5px;
+    }
   }
 `
 
