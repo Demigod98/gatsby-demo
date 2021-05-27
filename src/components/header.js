@@ -40,14 +40,14 @@ const MenuIcon = styled.button`
     margin-left: ${({ nav }) => (nav ? "0.3rem" : "0rem")};
 
     :first-child {
-      transform: ${({ nav }) => (nav ? "rotate(44deg)" : "rotate(0)")};
+      transform: ${({ nav }) => (nav ? "rotate(48grad)" : "rotate(0)")};
     }
     :nth-child(2) {
       opacity: ${({ nav }) => (nav ? "0" : "1")};
     }
 
     :nth-child(3) {
-      transform: ${({ nav }) => (nav ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ nav }) => (nav ? "rotate(-48grad)" : "rotate(0)")};
     }
   }
 `
@@ -72,6 +72,7 @@ const MenuLinks = styled.nav`
   z-index: 4;
   @media (min-width: 960px) {
     width: 100%;
+    pointer-events: none;
     background-color: transparent;
     transform: translateX(0);
   }
