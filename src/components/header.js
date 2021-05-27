@@ -88,7 +88,7 @@ const MenuLinks = styled.nav`
   z-index: 4;
   @media (min-width: 960px) {
     width: 100%;
-    pointer-events: none;
+    height: fit-content;
     background-color: transparent;
     transform: translateX(0);
   }
@@ -100,7 +100,7 @@ const MenuLinks = styled.nav`
       display: flex;
       flex-direction: row;
       position: relative;
-      top: -43.5%;
+      margin-top: 1rem;
       left: 30%;
       margin-right: 5rem;
     }
